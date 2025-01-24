@@ -1,0 +1,40 @@
+title API Sequence Diagram - User Interaction
+
+actor User
+participant "Browser / Frontend" as Frontend
+participant "API Gateway" as API
+
+participant "Backend Server" as Backend
+participant "Database" as DB
+
+== Add Comment ==
+User -> Frontend: Add comment
+Frontend -> API: POST /add_comment (user_id, comment_content, game_id)
+API -> Backend: Add comment to DB
+Backend -> DB: Insert comment
+alt No problem with adding comment
+DB --> Backend: Comment added
+Backend --> API: Success
+API --> Frontend: 200 OK - Comment has been added succesfully
+Frontend --> User: Display success message
+else Problem with adding comment
+DB --> API: Problem adding comment
+API --> Frontend: 500 Internal Server
+Frontend --> User: Display error
+end
+
+== Add Game to List ==
+User -> Frontend: Add game to my list
+Frontend -> API: POST /add_game_to_list (user_id, game_id)
+API -> Backend: Update user's game list
+alt No problem adding game to user's list
+Backend -> DB: Insert game to user's list
+DB --> Backend: Game added
+Backend --> API: Success
+API --> Frontend: Confirmation
+Frontend --> User: Game added to list
+else Problem adding game to user's list
+DB --> API: Problem adding comment
+API --> Frontend: 500 Internal Server
+Frontend --> User: Display error
+end

@@ -1,0 +1,132 @@
+.action {
+  margin-top: 5%;
+}
+
+.account-title {
+  padding: 2%;
+  margin-left: 2%;
+  font-size: 1.5rem; /* Taille par défaut */
+}
+
+h4 {
+  font-size: 18px;
+}
+.alert{
+  color: #dc3545;
+}
+.account-actions {
+  padding: 2%;
+  margin-left: 23%;
+  font-size: 14px;
+}
+
+.password-change input {
+ 
+  padding: 10px; 
+  margin-right:10px;
+  color:white;
+  background-color: #191c1f;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+.btn {
+  margin-top: 2%;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+/* Couleurs des boutons */
+.blue-outline {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  
+}
+
+.red-outline {
+  background-color: #e96a77;
+  border: none;
+  color: white;
+}
+
+.red {
+  background-color: #dc3545;
+  border:none;
+  color: white;
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* Pour les petits écrans (smartphones) */
+@media screen and (max-width: 768px) {
+  .action {
+    margin-top: 10%; /* Plus d'espacement pour petits écrans */
+  }
+
+  .account-title {
+    font-size: 1.2rem; /* Réduction de la taille du titre */
+    margin-left: 5%;
+  }
+
+  .account-actions {
+    padding: 5%;
+    margin-left: 5%; /* Réduction de l'espacement à gauche */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Réduction de la taille des boutons */
+    padding: 8px; /* Boutons légèrement plus petits */
+    width: 60%; /* Occuper toute la largeur sur mobile */
+    text-align: center; /* Alignement centré */
+  }
+}
+
+/* Pour les tablettes */
+@media screen and (max-width: 1024px) {
+  .action {
+    margin-top: 7%; /* Espacement intermédiaire */
+  }
+
+  .account-title {
+    font-size: 1.3rem; /* Ajustement de la taille du titre */
+    margin-left: 10%;
+  }
+
+  .account-actions {
+    margin-left: 10%; /* Réduction de l'espacement */
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+    width: 40%; /* Les boutons prennent plus d'espace */
+    text-align: center;
+  }
+}
+
+/* Pour les grands écrans (desktops) */
+@media screen and (min-width: 1025px) {
+  .action {
+    margin-top: 5%; /* Espacement par défaut */
+  }
+
+  .account-title {
+    font-size: 1.5rem;
+    margin-left: 2%;
+  }
+
+  .account-actions {
+    padding: 2%;
+    margin-left: 23%;
+  }
+
+  .btn {
+    font-size: 14px; /* Taille par défaut */
+    padding: 10px;
+    width: auto; /* Taille normale des boutons */
+  }
+}

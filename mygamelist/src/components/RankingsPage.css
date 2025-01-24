@@ -1,0 +1,110 @@
+/* Conteneur principal */
+.rankings-page {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Bouton Retour */
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Titre principal */
+.rankings-title {
+  left: 0;
+  margin-bottom: -5%;
+  padding-top: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+/* Grille principale contenant toutes les sections */
+.rankings-grid {
+  display: flex;
+  flex-direction: column; /* Chaque section occupe une ligne */
+  gap: 40px; /* Espacement entre les sections */
+}
+
+/* Chaque section de classement */
+.ranking-category {
+  text-align: center; /* Centrer le titre de la section */
+}
+
+/* Titre de chaque section */
+/* Titre de chaque section */
+.ranking-category h2 {
+  font-size: 30px;
+  margin-top: 10%;
+  margin-bottom: 2%;
+  color: #ffffff;
+  text-align: left; /* Aligner le titre à gauche */
+  margin-left: 5%; /* Ajouter un petit espacement depuis le bord gauche */
+}
+
+
+/* Grille des éléments de chaque section */
+.ranking-items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+  column-gap: 0; /* Espacement entre les colonnes (horizontal) */
+  row-gap: 15px; /* Espacement entre les lignes (vertical) */
+  justify-items: center; /* Centrer les items horizontalement */
+}
+
+/* Chaque élément de classement */
+.ranking-item {
+ 
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #22262a;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center; /* Centrer le texte */
+  width: 70%; /* Pour une taille uniforme */
+}
+
+/* Lien à l'intérieur de chaque classement */
+.ranking-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+
+/* Nom du genre dans le lien */
+.ranking-genre {
+  font-style: italic;
+  color: #007bff;
+}
+
+/* Effet hover sur chaque classement */
+.ranking-item:hover {
+  background-color: #007bff; /* Fond bleu clair */
+  transform: scale(1.03); /* Léger zoom */
+}
+
+.ranking-item:hover .ranking-genre {
+  color: #22262a;
+}
+
+a {
+  color: #ffffff;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+  .rankings-title {
+      margin-top: 15%;
+  }
+
+  .ranking-items-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les écrans moyens */
+  }
+}
+
+@media (max-width: 480px) {
+  .ranking-items-grid {
+      grid-template-columns: 1fr; /* 1 colonne pour les petits écrans */
+  }
+}

@@ -1,0 +1,384 @@
+.top-games {
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.top-games h3 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 9%;
+}
+
+/* Disposition des trois premiers jeux */
+.top-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 50px;
+  position: relative;
+  flex-wrap: wrap; /* Passe en colonne sur petit écran */
+}
+
+.game-container {
+  text-align: center;
+  position: relative;
+  margin-bottom: 5%;
+  flex: 1 1 30%; /* Largeur flexible */
+  max-width: 400px; /* Largeur max */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre horizontalement */
+}
+
+/* Badges de classement */
+.rank-badge-1,
+.rank-badge-2,
+.rank-badge-3 {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.rank-badge-1 {
+  background-color: gold;
+}
+
+.rank-badge-2 {
+  background-color: silver;
+}
+
+.rank-badge-3 {
+  background-color: #cd7f32;
+}
+
+/* Covers des jeux */
+.game-cover img {
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 100%; /* Par défaut, occupe toute la largeur de son conteneur */
+  max-width: 400px; /* Largeur max sur grand écran */
+  height: auto; /* Maintient le ratio */
+}
+
+/* Styles pour les titres des jeux */
+.game-title {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Style du tableau */
+.game-table {
+  margin-top: 80px;
+  width: 100%; /* Par défaut, prend toute la largeur */
+  max-width: 1500px; /* Largeur max sur grand écran */
+  margin-left: auto;
+  margin-right: auto; /* Centré horizontalement */
+}
+
+table {
+  width: 100%; /* S'adapte à la largeur du conteneur */
+  border-collapse: collapse;
+  border-radius: 10px; /* Coins arrondis */
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: center;
+}
+
+table th {
+  box-shadow: 0 0 0 2px rgb(27, 27, 27);
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+}
+
+table td {
+  box-shadow: 0 0 0 2px rgb(27, 27, 27);
+  background-color: #22262a;
+  color: white;
+  font-size: 13px;
+}
+
+/* RESPONSIVE - Covers et tableau */
+@media screen and (max-width: 1389px) {
+  .game-cover img {
+    max-width: 380px;
+  }
+  .game-title {
+    font-size: 1.3rem;
+  }
+  .game-table {
+    max-width: 1000px; /* Réduction du tableau */
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .top-games h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15%;
+  }
+  .game-cover img {
+    max-width: 350px;
+  }
+  .game-title {
+    font-size: 1.2rem;
+  }
+  .game-table {
+    max-width: 900px; /* Réduction du tableau */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .game-cover img {
+    max-width: 300px;
+  }
+  .game-title {
+    font-size: 1.1rem;
+  }
+
+  .top-games h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-games h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25%;
+    margin-top: 14%;
+  }
+  .top-three {
+    flex-direction: column; /* Les jeux passent en colonne */
+    gap: 30px; /* Réduction de l'espacement */
+    align-items: center; /* Centre horizontalement */
+  }
+  .game-container {
+    flex: 1 1 100%;
+    max-width: none; /* Supprime la limite de largeur */
+  }
+  .game-cover img {
+    max-width: 250px;
+  }
+  .game-title {
+    font-size: 1rem;
+    margin-bottom: 5%;
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  .game-cover img {
+    max-width: 200px;
+  }
+  .game-title {
+    font-size: 0.9rem;
+  }
+  
+}
+  
+  
+  .top-games h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 9%;
+  }
+  
+  /* Disposition des trois premiers jeux */
+  .top-three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 50px;
+    position: relative;
+    flex-wrap: wrap; /* Passe en colonne sur petit écran */
+  }
+  
+  .game-container {
+    text-align: center;
+    position: relative;
+    margin-bottom: 5%;
+    flex: 1 1 30%; /* Largeur flexible */
+    max-width: 400px; /* Largeur max */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+  }
+  
+  /* Badges de classement */
+  .rank-badge-1,
+  .rank-badge-2,
+  .rank-badge-3 {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  .rank-badge-1 {
+    background-color: gold;
+  }
+  
+  .rank-badge-2 {
+    background-color: silver;
+  }
+  
+  .rank-badge-3 {
+    background-color: #cd7f32;
+  }
+  
+  /* Covers des jeux */
+  .game-cover img {
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 100%; /* Par défaut, occupe toute la largeur de son conteneur */
+    max-width: 400px; /* Largeur max sur grand écran */
+    height: auto; /* Maintient le ratio */
+  }
+  
+  /* Styles pour les titres des jeux */
+  .game-title {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Style du tableau */
+  .game-table {
+    margin-top: 80px;
+    width: 100%; /* Par défaut, prend toute la largeur */
+    max-width: 1800px; /* Largeur max sur grand écran */
+    margin-left: auto;
+    margin-right: auto; /* Centré horizontalement */
+  }
+  
+  table {
+    width: 100%; /* S'adapte à la largeur du conteneur */
+    border-collapse: collapse;
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden;
+  }
+  
+  table th,
+  table td {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  table th {
+    box-shadow: 0 0 0 2px rgb(27, 27, 27);
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+  }
+  
+  table td {
+    box-shadow: 0 0 0 2px rgb(27, 27, 27);
+    background-color: #22262a;
+    color: white;
+    font-size: 13px;
+  }
+  
+  /* RESPONSIVE - Covers et tableau */
+  @media screen and (max-width: 1389px) {
+    .game-cover img {
+      max-width: 380px;
+    }
+    .game-title {
+      font-size: 1.3rem;
+    }
+
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .game-cover img {
+      max-width: 350px;
+    }
+    .game-title {
+      font-size: 1.2rem;
+    }
+  
+  }
+  
+  @media screen and (max-width: 992px) {
+    .game-cover img {
+      max-width: 300px;
+      margin-bottom: 15%;
+    }
+    .game-title {
+      font-size: 1.1rem;
+    }
+    
+    .top-games h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 15%;
+      }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .top-three {
+      flex-direction: column; /* Les jeux passent en colonne */
+      gap: 30px; /* Réduction de l'espacement */
+      align-items: center; /* Centre horizontalement */
+    }
+    .game-container {
+      flex: 1 1 100%;
+      max-width: none; /* Supprime la limite de largeur */
+    }
+    .game-cover img {
+      max-width: 250px;
+    }
+    .game-title {
+      font-size: 1rem;
+    }
+    .game-table {
+      max-width: 600px; /* Réduction du tableau */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .game-cover img {
+      max-width: 200px;
+    }
+    .game-title {
+      font-size: 0.9rem;
+    }
+  
+  }
+  

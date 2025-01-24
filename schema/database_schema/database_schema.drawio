@@ -1,0 +1,184 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.186 Electron/32.2.6 Safari/537.36" version="24.7.17">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1521" dy="-372" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-251" value="User" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1200" width="480" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-252" value="_id ObjectId()&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// ID unique de l&#39;utilisateur, généré par MongoDB." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-251">
+          <mxGeometry y="26" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-253" value="name varchar&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Nom affiché de l&#39;utilisateur." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-251">
+          <mxGeometry y="56" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-254" value="email varchar&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Adresse e-mail de l&#39;utilisateur, unique et utilisée pour la connexion." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-251">
+          <mxGeometry y="86" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-255" value="password hashed_password&amp;nbsp; // Mot de passe haché de l&#39;utilisateur, stocké en sécurité." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-251">
+          <mxGeometry y="116" width="480" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-256" value="profile_picture varchar&amp;nbsp; // URL de la photo de profil de l&#39;utilisateur, optionnelle." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-251">
+          <mxGeometry y="150" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-257" value="game_list list&amp;nbsp; // Liste des jeux associés à l&#39;utilisateur." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-251">
+          <mxGeometry y="180" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-258" value="Game" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1200" width="450" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-259" value="_id ObjectId()&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Identifiant unique du jeu, généré automatiquement par MongoDB." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="26" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-260" value="title varchar&amp;nbsp; // Titre du jeu, requis pour l&#39;affichage et la recherche." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="56" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-261" value="description varchar&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Résumé ou description du jeu." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="86" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-262" value="release_date&amp;nbsp; // Date de sortie du jeu." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="116" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-263" value="total_rating float&amp;nbsp; // Note moyenne du jeu basée sur les avis des critiques" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="146" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-264" value="total_rating_count int&amp;nbsp; // Nombre total de notes soumises pour le jeu." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="176" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-265" value="cover {&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Objet imbriqué contenant les détails de l&#39;image de couverture&amp;nbsp;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;thumb varchar,&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;// URL vers la version miniature de l&#39;image.&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;original varchar&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;// URL vers la version haute résolution de l&#39;image.&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="206" width="450" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-266" value="genres list&amp;nbsp; // Liste des genres auxquels appartient le jeu" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="280" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-267" value="platforms list&amp;nbsp; // Liste des plateformes où le jeu est disponible" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="310" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-270" value="platform_logos list&amp;nbsp; //&amp;nbsp;&lt;span lang=&quot;fr&quot; class=&quot;HwtZe&quot;&gt;Liste des logos des plateformes&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="340" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-268" value="developers list&amp;nbsp; // Liste des développeurs ayant créé le jeu." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="370" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-269" value="publishers list&amp;nbsp; // Liste des éditeurs responsables de la sortie du jeu." style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-258">
+          <mxGeometry y="400" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-273" value="Comment" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1690" width="460" height="266" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-274" value="_id ObjectId()&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Unique comment ID, generated by MongoDB" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-273">
+          <mxGeometry y="26" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-278" value="user_id ObjectId()&amp;nbsp; // Unique user&#39;s ID, who post this comment" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-273">
+          <mxGeometry y="56" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-279" value="game_id ObjectId()&amp;nbsp; // Unique game&#39;s ID, which this comment belongs to" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-273">
+          <mxGeometry y="86" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-280" value="content varchar&amp;nbsp; // User&#39;s comment content" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-273">
+          <mxGeometry y="116" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-281" value="parent_id ObjectId()&amp;nbsp; // ID of the parent comment" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-273">
+          <mxGeometry y="146" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-282" value="created_at date&amp;nbsp; // Time when the comment is posted" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-273">
+          <mxGeometry y="176" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-283" value="is_modified boolean&amp;nbsp; // Whether the comment has been modified" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-273">
+          <mxGeometry y="206" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-284" value="modified_date&amp;nbsp; // Only when the comment is modified" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-273">
+          <mxGeometry y="236" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-285" value="Comment" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1200" width="490" height="266" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-286" value="_id ObjectId()&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// ID unique du commentaire" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-285">
+          <mxGeometry y="26" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-287" value="user_id ObjectId()&amp;nbsp; // Utilisateur ayant posté le commentaire" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-285">
+          <mxGeometry y="56" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-288" value="game_id ObjectId()&amp;nbsp; // (Facultatif) Objet auquel le commentaire est associé" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-285">
+          <mxGeometry y="86" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-289" value="content varchar&amp;nbsp;&amp;nbsp;&lt;span lang=&quot;fr&quot; class=&quot;HwtZe&quot;&gt;// Contenu du commentaire de l&#39;utilisateur&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-285">
+          <mxGeometry y="116" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-290" value="parent_id ObjectId()&amp;nbsp;// ID du commentaire parent (null si c&#39;est un commentaire principal)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-285">
+          <mxGeometry y="146" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-291" value="created_at date&amp;nbsp; //&amp;nbsp;&lt;span lang=&quot;fr&quot; class=&quot;HwtZe&quot;&gt;Heure à laquelle le commentaire est publié&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-285">
+          <mxGeometry y="176" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-292" value="is_modified boolean&amp;nbsp; // Si le commentaire a été modifié" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-285">
+          <mxGeometry y="206" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-293" value="modified_date&amp;nbsp; // Uniquement lorsque le commentaire est modifié" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-285">
+          <mxGeometry y="236" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-220" value="Game" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1690" width="460" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-221" value="_id ObjectId()&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Unique identifier for the game, generated by MongoDB" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="26" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-222" value="title varchar&amp;nbsp; // Title of the game, required for display and search" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="56" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-223" value="description varchar&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// A brief summary or overview of the game" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="86" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-224" value="release_date&amp;nbsp; // Date when the game is released" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="116" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-225" value="total_rating float&amp;nbsp; // Average rating score based on critics" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="146" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-226" value="total_rating_count int&amp;nbsp; // Total number of ratings submitted for the game" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="176" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-227" value="cover {&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Nested object containing cover image details&lt;br&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;thumb varchar,&amp;nbsp; // URL to the thumbnail version of the image&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;original varchar&amp;nbsp; // URL to the high-resolution version of the image&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="206" width="460" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-228" value="genres list&amp;nbsp; // List of genres the game belongs to" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="280" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-229" value="platforms list&amp;nbsp; // List of platforms the game is available on" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="310" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-272" value="platform_logos list&amp;nbsp; // List of logos for the platforms" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="340" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-230" value="developers list&amp;nbsp; // List of developers who created the game" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="370" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-231" value="publishers list&amp;nbsp; // List of publishers releasing the game" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-220">
+          <mxGeometry y="400" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-232" value="User" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1690" width="460" height="206" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-233" value="_id ObjectId()&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// Unique user&#39;s ID, generated by MongoDB" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-232">
+          <mxGeometry y="26" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-245" value="name varchar&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// User&#39;s displayed name" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-232">
+          <mxGeometry y="56" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-246" value="email varchar&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// User&#39;s email address, unique and used for login" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-232">
+          <mxGeometry y="86" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-247" value="password hashed_password&amp;nbsp; // User&#39;s password, securely stored as a hashed value" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-232">
+          <mxGeometry y="116" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-248" value="profile_picture varchar&amp;nbsp; // URL to the user&#39;s profile picture, optional" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-232">
+          <mxGeometry y="146" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wkWIW-sbkFtgI-aQdSFa-249" value="game_list list&amp;nbsp; // List of games associated with the user" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="wkWIW-sbkFtgI-aQdSFa-232">
+          <mxGeometry y="176" width="460" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,45 @@
+title API Sequence Diagram - Game Search
+
+actor User
+participant "Browser / Frontend" as Frontend
+participant "API Gateway" as API
+
+participant "Backend Server" as Backend
+participant "Database" as DB
+
+== Search Game ==
+User -> Frontend: Search for a game
+Frontend -> API: GET /search with any data in mockdata.json
+API -> Backend: Fetch games from DB
+Backend -> DB: Query game by name
+alt No prolem with retrieving games
+    DB --> Backend: Return matching games
+    Backend --> API: List of games
+    API --> Frontend: 200 OK - Returns list of games
+    Frontend --> User: Display search results
+else Problem with retrieving games
+    DB --> API: Problem retrieving games
+    API --> Frontend: 500 Internal Server
+    Frontend --> User: Display error
+end
+
+== Retrieve My Game List ==
+User -> Frontend: Request game list
+Frontend -> API: GET /mygamelist with user_id
+API -> Backend: Retrieve user's game list
+Backend -> DB: Query games for user_id
+
+alt Games found
+    DB --> Backend: Return game list
+    Backend --> API: Return list
+    API --> Frontend: 200 OK - Returns user's game list
+    Frontend --> User: Display user's games
+else No games found
+    DB --> API: No games found
+    API --> Frontend: 404 Not Found
+    Frontend --> User: Display error
+else Problem with retrieving games
+    DB --> API: Problem retrieving games
+    API --> Frontend: 500 Internal Server
+    Frontend --> User: Display error
+end

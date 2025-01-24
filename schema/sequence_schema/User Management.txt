@@ -1,0 +1,45 @@
+title API Sequence Diagram - User Management
+
+actor User
+participant "Browser / Frontend" as Frontend
+participant "API Gateway" as API
+
+participant "Backend Server" as Backend
+participant "Database" as DB
+
+== Add User ==
+User -> Frontend: Register account
+Frontend -> API: POST /add_user (user_email, user_pass, user_username)
+API -> Backend: Add user to DB
+Backend -> DB: Insert user record
+alt No problem with adding user
+DB --> Backend: User added
+Backend --> API: Success
+API --> Frontend: 200 OK - User created
+Frontend --> User: Display success message
+else Problem with adding user
+DB --> API: Problem adding user
+API --> Frontend: 500 Internal Server
+Frontend --> User: Display Error
+end
+
+== Login Process ==
+User -> Frontend: Login with credentials
+Frontend -> API: POST /login_process (user_email, user_pass)
+API -> Backend: Validate credentials
+Backend -> DB: Query user credentials
+alt Valid user
+    DB --> Backend: User found
+    Backend --> API: Authentication token
+    API --> Frontend: 200 OK - Token returned
+    Frontend --> User: Login successful
+else Invalid user
+    DB --> Backend: User not found or invalid
+    Backend --> API: Error
+    API --> Frontend: Login error
+    Frontend --> User: Display error
+else Problem logging user in
+DB --> API: Problem loggin user in
+API --> Frontend: 500 Internal Server
+Frontend --> User: Display Error
+end

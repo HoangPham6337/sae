@@ -1,0 +1,291 @@
+/* Styles principaux pour la page */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), /* Couche supérieure sombre semi-transparente */
+      rgba(0, 0, 0, 0.7)
+    ),
+   ;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  padding: 0 8%; /* Augmente l'espacement des sections */
+}
+
+/* Section gauche : texte d'accueil */
+
+/* Section gauche : texte d'accueil */
+.welcome-section {
+  flex: 1;
+  max-width: 44%; /* Réduit légèrement la largeur */
+  padding-top: 0; /* Pas de padding en haut pour coller au bord supérieur */
+  margin-top: 0; /* Enlève toute marge au-dessus */
+  
+  align-items: center; /* Centrer verticalement si nécessaire */
+}
+
+.welcome-section h1 {
+  color:#007bff;
+  font-size: 3rem; /* Taille réduite pour tenir sur une ligne */
+  line-height: 1.2; /* Rapproche les lignes */
+  margin: 0; /* Enlever la marge pour que le texte n'ait pas d'espace autour */
+  padding: 0; /* Supprimer tout padding supplémentaire */
+  margin-bottom: 5%;
+}
+
+.welcome-section p {
+  font-size: 16px; /* Réduit la taille de la phrase sous le titre */
+  line-height: 1.6;
+  margin-top: 1rem; /* Un peu d'espace entre le titre et le texte */
+}
+
+/* Applique l'italique sur la métaphore */
+.welcome-section p em {
+  font-style: italic; /* Applique l'italique à la phrase avec la métaphore */
+}
+
+
+
+
+/* Section droite : formulaire de connexion */
+.login-section {
+  flex: 1;
+  max-width: 35%; /* Réduit légèrement la largeur pour plus d'espace entre les sections */
+  padding: 3rem; /* Augmente le padding interne */
+  border-radius: 12px;
+}
+
+/* Titre de connexion */
+.login-section h2 {
+  font-size: 3.5rem; /* Titre plus grand */
+  margin-bottom: 5rem;
+  color: #007bff;
+  text-align: center; /* Centre le titre */
+}
+
+/* Champs de formulaire */
+.login-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-section input {
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-section input:focus {
+  outline: none;
+  border-color: #007bff;
+ 
+}
+
+/* Bouton de connexion */
+/* Bouton de connexion */
+.login-section button {
+  font-size: 16px;
+  width: 60%; /* Largeur du bouton */
+  padding: 0.8rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  
+  /* Centrer le bouton */
+  margin: 0 auto; /* Centre le bouton horizontalement */
+  margin-bottom: 3%;
+  display: block; /* Assure que l'élément est un bloc pour que margin auto fonctionne */
+}
+
+
+.login-section button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Liens supplémentaires */
+.login-section p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login-section p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-section p a:hover {
+  text-decoration: underline;
+}
+
+/* Texte des conditions */
+.terms {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+/* Style pour le lien "GameVerse" */
+.gameverse-link {
+  color: #007bff; /* Couleur bleue pour le lien */
+  text-decoration: none; /* Supprimer le soulignement */
+  font-weight: bold; /* Mettre en gras */
+}
+
+.gameverse-link:hover {
+  color:#ffffff;
+}
+
+/* Ajouter les styles de l'animation pour les champs de saisie */
+.input-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.input {
+  border: solid 1.5px #9e9e9e;
+  border-radius: 1rem;
+  background: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #f5f5f5;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+}
+
+.user-label {
+  position: absolute;
+  left: 15px;
+  color: #e8e8e8;
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+}
+
+/* Lorsque l'input est focus ou valide */
+.input:focus, .input:valid {
+  outline: none;
+  border: 1.5px solid #1a73e8;
+}
+
+.input:focus ~ .user-label, .input:valid ~ .user-label {
+  transform: translateY(-1rem) scale(0.8); /* Le label se déplace et se réduit */
+  background-color: #212121;
+  padding: 0 .2em;
+  color: #2196f3;
+}
+
+/* Personnalisation des boutons de la page */
+.login-section button {
+  font-size: 1rem;
+  width: 60%; /* Largeur du bouton */
+  padding: 0.8rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+
+.login-section button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+/* Ajouter les styles de l'animation pour les champs de saisie */
+.input-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.input {
+  border: solid 1.5px #9e9e9e;
+  border-radius: 1rem;
+  background: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #f5f5f5;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+}
+
+.user-label {
+  position: absolute;
+  left: 15px;
+  color: #e8e8e8;
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+}
+
+/* Lorsque l'input est focus ou valide */
+.input:focus, .input:valid {
+  outline: none;
+  border: 1.5px solid #1a73e8;
+}
+
+.input:focus ~ .user-label, .input:valid ~ .user-label {
+  transform: translateY(-1rem) scale(0.8); /* Le label se déplace et se réduit */
+  background-color: #0e0f10;
+  padding: 0 .2em;
+  color: #2196f3;
+}
+
+/* Personnalisation des boutons de la page */
+.login-section button {
+  font-size: 1rem;
+  width: 60%; /* Largeur du bouton */
+  padding: 0.8rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+
+.login-section button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 950px) {
+  .auth-page {
+    margin-top: 20%;
+    flex-direction: column; /* Change la direction en colonne */
+    padding: 0 5%; /* Ajuste le padding */
+  }
+
+  .welcome-section {
+    display: none; /* Cache la section de bienvenue */
+  }
+
+  .login-section {
+    max-width: 100%; /* La section de connexion prend toute la largeur */
+    padding: 2rem; /* Réduit le padding interne */
+  }
+}

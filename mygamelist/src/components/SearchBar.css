@@ -1,0 +1,509 @@
+.search-page {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux blocs de passer à la ligne si nécessaire */
+  justify-content: space-between; /* Distribution égale avec espace entre les blocs */
+  gap: 20px;
+  width: 90%;
+  height: 100%;
+  padding: 15px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+/* Style commun pour tous les blocs (filtre, résultats, classement) */
+.filter-block{
+
+  margin-top: 8%;
+  flex: 1 1 10%; /* Les blocs s'ajustent pour occuper environ 30% chacun */
+ 
+  background: #22262a;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-sizing: border-box;
+}
+/* Amélioration de la barre de défilement */
+.filter-options {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px; /* Ajoute un peu d'espace à droite pour la barre de défilement */
+}
+
+.filter-options::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre de défilement */
+}
+
+.filter-options::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Couleur du pouce (partie de la barre qui bouge) */
+  border-radius: 10px; /* Coins arrondis du pouce */
+  transition: background-color 0.3s ease; /* Transition douce au survol */
+}
+
+.filter-options::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+.filter-options::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Couleur de la piste (fond de la barre de défilement) */
+  border-radius: 10px; /* Coins arrondis de la piste */
+
+}
+
+/* Style du bouton "Voir plus" */
+.see-more {
+  margin-top: 15px;
+  background-color: #007bff; /* Vert vif */
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase; /* Met le texte en majuscules */
+  border-radius: 10px; /* Coins arrondis pour un look plus moderne */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.see-more:hover {
+  background-color: #0056b3; /* Couleur verte plus foncée au survol */
+  transform: translateY(-2px); /* Légère élévation au survol */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.see-more:focus {
+  outline: none; /* Supprime le contour bleu par défaut */
+  box-shadow: 0 0 0 3px rgba(31, 57, 173, 0.5); /* Ombre verte au focus */
+}
+
+
+/* Bloc des filtres */
+.filter-block {
+  height: 50%; /* La hauteur du bloc s'ajuste automatiquement */
+}
+
+.filter-block h3{
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #f5f5f5;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h4 {
+  margin-bottom: 10%;
+  font-size: 20px;
+}
+
+.filter-section label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.filter-options {
+  display: grid; /* Utilisation de la grille */
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  gap: 2px; /* Espacement entre les éléments */
+}
+
+.filter-options label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacement entre la case à cocher et le texte */
+}
+
+.apply-filters-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.apply-filters-button:hover {
+  background-color: #0056b3;
+}
+
+/* Bloc des résultats */
+.results-container {
+  margin-top: 0.8%;
+  height: 50%;
+  flex: 3 1 50%; /* Bloc principal qui occupe plus d'espace */
+  background: #22262a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.search-bar {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #22262a;
+  border-radius: 35px;
+  outline: none;
+  font-size: 16px;
+  background-color: #0e0f10;
+  color: white;
+}
+
+
+
+/* Résultats de recherche */
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour les résultats */
+  gap: 20px;
+}
+
+.search-result-item {
+  cursor: pointer;
+  background: #323941;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.search-result-item img {
+  width: 100%;
+ 
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.search-result-item:hover {
+  transform: scale(1.05);
+}
+
+
+
+.no-results {
+  text-align: center;
+  color: #f5f5f5;
+  font-size: 16px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination-button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #323941;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  font-weight: bold;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
+.pagination span{
+
+  margin-top: 0.5%;
+}
+
+/* Style pour le bouton du filtre */
+/* Positionner le bouton filtre en bas au centre */
+/* Bouton toggle fixe en bas à droite */
+/* Bloc filtre affiché */
+.filter-block.show {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  max-height: 70%;
+  background: #22262a;
+  z-index: 1001;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* Défilement interne */
+  padding: 20px;
+  animation: slideUp 0.4s ease forwards; /* Animation d'apparition */
+}
+/* Bouton croix pour fermer le filtre */
+.close-filter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+/* Désactiver le défilement de la page principale lorsque le filtre est affiché */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Bouton toggle pour afficher le filtre */
+.filter-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1002;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Effet de survol pour le bouton toggle */
+.filter-toggle:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+/* Animation pour faire apparaître le filtre */
+/* Animation pour faire apparaître le filtre */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.filter-block.hidden {
+  animation: slideDown 0.4s ease forwards; /* Animation de disparition */
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  max-height: 70%;
+  background: #22262a;
+  z-index: 1001;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* Défilement interne */
+  padding: 20px;
+  display: none;
+}
+
+/* Cacher la barre de défilement (scrollbar) */
+.filter-block::-webkit-scrollbar {
+  display: none; /* Ne pas afficher la barre de défilement */
+}
+
+.filter-block {
+  overflow-y: scroll; /* Permet au contenu de défiler sans barre de défilement */
+}
+
+@media(max-width:900px){
+  .search-bar{
+    margin-top: 15%;
+    
+  }
+}
+@media (max-width:1550px){
+@media (max-width:1488px){
+  .filter-options{
+    grid-template-columns: repeat(1,1fr);
+  }
+  
+}
+@media (max-width:1220px){
+  .filter-options{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .search-page{
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .search-page {
+  
+    width: 100%;
+
+  }
+  
+  /* Cacher le bloc filtre en mode responsive (mobile) */
+@media (max-width: 768px) {
+
+  .filter-block {
+    display: none; /* Caché par défaut */
+  }
+  
+  .filter-block.show {
+    display: block; /* Affiche le filtre quand le bouton est cliqué */
+    animation: slideUp 0.4s ease forwards;
+    position: fixed;
+    bottom: 0;
+    left: 5%; /* Ajustement de la position */
+    width: 90%; /* Largeur réduite */
+    max-height: 70%; /* Hauteur maximale */
+    background: #22262a; /* Même couleur que le reste du filtre */
+    z-index: 1001; /* Sous le bouton toggle */
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Défilement vertical */
+    padding: 20px;
+    
+  }
+}
+
+  .results-container {
+    flex: 1 1 100%;
+  }
+
+  .ranking-block {
+    flex: 1 1 100%;
+  }
+
+  .filter-toggle {
+    display: flex; /* Active le bouton rond */
+  }
+  .filter-section h4{
+    margin-bottom: 4%;
+  }
+}
+
+/* Bouton rond pour afficher les filtres sur mobile */
+.filter-toggle {
+  width: 10%;
+  height: 7%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: none; /* Masqué par défaut */
+}
+
+.filter-icon {
+  font-size: 20px;
+}
+
+.filter-toggle i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-toggle img {
+  width: 70%; /* Taille de l'image dans le bouton */
+  height: auto; /* Garde les proportions de l'image */
+}
+/* Le bloc des filtres est caché par défaut sur mobile */
+
+
+/* Cacher le bloc filtre sur mobile si l'état "showFilters" est false */
+.filter-block.hidden {
+  display: none;
+}
+
+
+
+/* Masquer le bloc filtre par défaut en mode paysage */
+@media screen and (max-width: 768px) {
+  
+  .filter-toggle {
+    display: block;
+  }
+
+  
+  .search-results {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile */
+  }
+}
+
+/* Lorsque le filtre est activé */
+.filter-block.hidden {
+  
+  display: block; /* Afficher le filtre lorsque le bouton est cliqué */
+  background-color: #22262a;
+  padding: 20px;
+  z-index: 1001;
+}
+
+/* Résultats sur les écrans plus grands */
+@media screen and (min-width: 769px) {
+  .search-results {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur les écrans larges */
+  }
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  /* Afficher le bouton toggle en mode paysage */
+  .filter-toggle {
+    display: block;
+  }
+
+  .search-results {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile en mode paysage */
+  }
+}
+@media screen and (max-width: 500px) {
+  .filter-toggle {
+    width:14%;
+    height: 7%;
+  }
+}
+
+
+} 
+@media (min-width: 769px) {
+  .close-filter {
+    display: none; /* Masquer la croix sur PC */
+  }
+}
